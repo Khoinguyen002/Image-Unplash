@@ -1,3 +1,3 @@
 import { UnsplashImage } from "./modals";
 
-export type GetImagesResponse = UnsplashImage[];
+export type GetImagesResponse = { data: UnsplashImage[] };

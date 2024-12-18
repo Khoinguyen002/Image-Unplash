@@ -14,13 +14,16 @@ export const useGetImages = () => {
   return useQuery<GetImagesResponse>({
     queryKey: ["assets"],
     queryFn: async () => {
-      const response = await fetch(API_URL + "/photos", {
-        method: "get",
-        headers: {
-          Authorization: `Client-ID S3TVJVpBUDl7nZtUtk9ekTAaT_aPsLMsSYUTYLFpUOU`,
-        },
-      });
-      return response.json();
+      // const response = await fetch(API_URL + "/photos", {
+      //   method: "get",
+      //   headers: {
+      //     Authorization: `Client-ID S3TVJVpBUDl7nZtUtk9ekTAaT_aPsLMsSYUTYLFpUOU`,
+      //   },
+      // });
+
+      const response = await fetch(API_URL + "/api/images");
+
+      return await response.json();
     },
   });
 };

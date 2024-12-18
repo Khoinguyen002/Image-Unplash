@@ -1,6 +1,4 @@
-import { API_URL } from "@/configs/env";
 import Image from "next/image";
-import React from "react";
 
 function Card({
   title,
@@ -15,7 +13,8 @@ function Card({
 }) {
   return (
     <div>
-      <Image alt="thumbnail" src={imgUrl || ""} width={"300"} height={300} />
+      <Image alt="thumbnail" src={imgUrl || ""} width={300} height={300} />
+      <p>{id}</p>
       <p>{title}</p>
       <p>{description}</p>
     </div>
